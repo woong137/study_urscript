@@ -1,0 +1,11 @@
+# test_move.script 내용 예시
+def my_motion():
+  movej([0, -1.57, -1.57, -1.57, 1.57, 0], a = 1.2, v = 1.0)
+  current_pose = get_actual_tcp_pose()
+  textmsg("Current Pose: ", current_pose)
+  sleep(1.0)
+  movej([0.5, -1.57, -1.2, -1.57, 1.57, 0], a = 0.8, v = 0.5)
+  current_pose = get_actual_tcp_pose()
+  textmsg("Current Pose: ", current_pose)
+  popup("Motion Finished!")
+end
